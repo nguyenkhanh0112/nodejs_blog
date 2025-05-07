@@ -4,14 +4,18 @@ const morgan = require('morgan')
 const port = 3000
 const handlebars = require('express-handlebars')
 const path = require('path')
-const sass = require('sass');
-// const result = sass.compile(scssFilename);
+
+const route = require('./resources/routes')
 
 
 app.use(express.static(path.join(__dirname,'public')))
+app.use(express.urlencoded({
+  extended: true
+}))
+app.use(express.json())
 
 //http logger route
-app.use(morgan('combined'))
+// app.use(morgan('combined'))
 
 
 // template engine
@@ -20,9 +24,11 @@ app.engine('hbs',handlebars.engine({
 }));
 app.set('view engine', 'hbs');
 app.set('views',path.join(__dirname,'resources/views'));
-app.get('/', (req, res) => {
-  res.render('news');
-})
+
+// route init
+route(app);
+
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
