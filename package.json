@@ -4,7 +4,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon --inspect src/index.js",
-    "watch": "sass --watch src/resources/scss/index.scss src/public/css/index.css",
+    "watch": "sass --watch src/resources/scss/app.scss src/public/css/app.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -32,8 +32,11 @@
   "dependencies": {
     "express": "^5.1.0",
     "express-handlebars": "^8.0.3",
+    "method-override": "^3.0.0",
     "mongoose": "^8.14.1",
-    "mongoose-slug-generator": "^1.0.4"
+    "mongoose-delete": "^1.0.2",
+    "mongoose-sequence": "^6.0.1",
+    "mongoose-slug-updater": "^3.3.0"
   },
   "devDependencies": {
     "husky": "^9.1.7",

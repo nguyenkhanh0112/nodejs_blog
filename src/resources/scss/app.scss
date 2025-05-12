@@ -1,10 +1,58 @@
-@import 'variables';
+@use '_variables';
 
-.card-course-item{
-    margin: 16px;
+.user-avatar{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-right: 4px;
 }
-// .card-img-top {
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;  /* Đảm bảo tất cả thẻ card có chiều cao giống nhau */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Đổ bóng cho card */
+    border-radius: 8px;  /* Bo góc card */
+}
+
+.card-body {
+    flex-grow: 1;
+    text-align: center;  /* Căn giữa văn bản trong card */
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;  /* Cắt ảnh để đảm bảo tỷ lệ */
+    border-top-left-radius: 8px;  /* Bo góc cho ảnh */
+    border-top-right-radius: 8px;
+}
+
+.card-title {
+    font-weight: bold;
+}
+.checkbox-select-all-options{
+    width: 160px;
+    margin: 0 16px;
+}
+// .btn {
 //     width: 100%;
-//     height: auto;
-//     object-fit: cover;  /* Đảm bảo ảnh có tỷ lệ chính xác */
-//   }
+//     margin-top: 10px;  /* Khoảng cách giữa nút và nội dung */
+// }
+
+.navbar-nav {
+    margin-left: auto; /* Đẩy các phần tử trong navbar ra ngoài bên phải */
+}
+
+
+.text-with-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px; /* Khoảng cách giữa chữ và icon */
+  }
+.text-with-icon i {
+    font-size: 0.8em; /* Thu nhỏ icon cho đẹp */
+  }
+  .icon-margin {
+    margin: 0 8px;
+}

@@ -1,0 +1,22 @@
+<div class="mt-4">
+    <h3>Cập nhập khóa học</h3>
+    <form method="post" action="/khoa-hoc/{{course._id}}?_method=PUT">
+    <div class="mb-3">
+        <label for="name" class="form-label">name</label>
+        <input type="text" class="form-control"name="name" value = "{{course.name}}"id="name">
+    </div> 
+    <div class="mb-3">
+        <label for="description" class="form-label">description</label>
+        <textarea  class="form-control"name="description" id="description">{{course.description}}</textarea>
+    </div> 
+    <div class="mb-3">
+        <label for="videoId" class="form-label">videoId</label>
+        <input type="text" class="form-control"name="videoId" value = "{{course.videoId}}"id="videoId">
+    </div> 
+    <div class="mb-3">
+        <label for="level" class="form-label">level</label>
+        <input type="text" class="form-control"name="level" value = "{{course.level}}" id="level">
+    </div> 
+    <button type="submit" class="btn btn-primary">Lưu lại</button>
+    </form>
+</div>
